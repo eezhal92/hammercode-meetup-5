@@ -1,5 +1,6 @@
 import cart from './cart';
 import products from './products';
+import coupon from './coupon';
 
 function combineReducers (reducers) {
   return (state = {}, action) => {
@@ -15,6 +16,7 @@ function combineReducers (reducers) {
 const rootReducer = combineReducers({
   cart,
   products,
+  coupon,
 });
 
 export default rootReducer;

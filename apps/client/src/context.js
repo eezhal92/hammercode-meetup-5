@@ -7,6 +7,7 @@ const AppContext = React.createContext({
       id: '',
       lineItems: [],
     },
+    coupon: null,
   },
 
   dispatch: () => {},

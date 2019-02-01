@@ -1,12 +1,12 @@
-var DISCOUNT_CODES = [
+var COUPONS = [
   { code: 'HAMMERCODE10', amount: 10, type: 'percent' },
   { code: 'JS20', amount: 20, type: 'nominal' },
 ]
 
-function findByCode (dicountCode) {
-  return DISCOUNT_CODES.find(function (discount) {
-    return discount.code === dicountCode;
-  });
+function findByCode (couponCode) {
+  return COUPONS.find(function (coupon) {
+    return coupon.code === couponCode;
+  }) || null;
 }
 
 module.exports = {

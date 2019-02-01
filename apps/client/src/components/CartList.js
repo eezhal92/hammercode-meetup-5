@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { getTotal } from '../utils';
 import CartItem from './CartItem';
 
 function CartList ({ lineItems, onRemove, onUpdateQty }) {
@@ -27,10 +26,6 @@ function CartList ({ lineItems, onRemove, onUpdateQty }) {
                   onUpdateQty={onUpdateQty}
                 />
               ))}
-            </div>
-            <div className="cart-total">
-              <span>Total</span>
-              <span>${getTotal(lineItems)}</span>
             </div>
           </>
         );

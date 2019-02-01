@@ -4,3 +4,5 @@ export const RECEIVE_CART = 'RECEIVE_CART';
 export const ADD_LINE_ITEM = 'ADD_LINE_ITEM';
 export const SET_LINE_ITEM_QTY = 'SET_LINE_ITEM_QTY';
 export const REMOVE_LINE_ITEM = 'REMOVE_LINE_ITEM';
+
+export const SET_COUPON = 'SET_COUPON';

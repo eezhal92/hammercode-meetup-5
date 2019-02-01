@@ -31,6 +31,7 @@ class App extends React.Component {
           id: '',
           lineItems: [],
         },
+        coupon: null,
       },
 
       imagePreviewSrc: false,
@@ -152,7 +153,7 @@ class App extends React.Component {
       <AppContext.Provider value={this.state}>
         <Router>
           <>
-            <MainNav cart={data.cart} />
+            <MainNav cart={data.cart} coupon={data.coupon} />
             <AppRouter/>
             <Footer />
 

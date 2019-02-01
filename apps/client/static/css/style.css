@@ -16,6 +16,19 @@ p {
   line-height: 1.75rem;
 }
 
+input[type="text"].input {
+  font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-wrapper {
+  padding: .5rem 0;
+}
+
 .main-nav {
   padding-left: 0;
   list-style: none;
@@ -101,6 +114,8 @@ h1, h2, h3, h4, h5 {
   background: #fff;
   border-radius: 3px;
   border: 1px solid #cecece;
+  text-decoration: none;
+  color: #333;
 }
 
 .btn--circle {
@@ -113,7 +128,13 @@ h1, h2, h3, h4, h5 {
   border-color: tomato;
 }
 
-.cart-total {
+.btn--blue {
+  background-color: #2196f3;
+  color: #fff;
+  border-color: #2196f3;
+}
+
+.total {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -170,4 +191,19 @@ h1, h2, h3, h4, h5 {
 .image-preview__img-wrapper img {
   max-width: calc(100vw - 2rem);
   max-height: calc(100vh - 2rem);
+}
+
+.coupon-form {
+  padding: .25rem 1rem;
+}
+
+.coupon-form__action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-wrapper {
+  padding: .25rem 1rem;
+  display: flex;
+  justify-content: flex-end;
 }

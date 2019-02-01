@@ -72,3 +72,8 @@ export function updateItemQty (cartId, productId, qty) {
   })
   .then(toJSON);
 }
+
+export function getCoupon (couponCode) {
+  return fetch(ENDPOINT_BASE_URL + '/api/coupons/' + couponCode)
+  .then(toJSON);
+}
