@@ -1,5 +1,7 @@
 # test-automation-demo
 
+[![CircleCI](https://circleci.com/gh/eezhal92/hammercode-meetup-5.svg?style=svg)](https://circleci.com/gh/eezhal92/hammercode-meetup-5)
+
 Talk Testing & Automation Demo. [Live Demo](http://kios-demo.now.sh)
 
 
