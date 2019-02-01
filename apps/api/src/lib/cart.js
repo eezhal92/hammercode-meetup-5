@@ -87,7 +87,9 @@ function total (cart, discount) {
     return total + (lineItem.qty * lineItem.price);
   }, 0);
 
-  return applyDiscount(sum, discount);
+  return sum;
+
+  // return applyDiscount(sum, discount);
 }
 
 /**
@@ -135,39 +137,6 @@ function format (total) {
   return '$' + total.toLocaleString()
 }
 
-/**
- * @param  {number}   total
- * @param  {Discount} discount
- * @return {number}
- */
-function applyDiscount (total, discount) {
-  if (!discount) return total;
-
-  var validTypes = ['percent', 'nominal']
-  if (!validTypes.includes(discount.type)) {
-    throw new Error(`Valid type should be either one of ${validTypes.join(',')}`)
-  }
-
-  var isValidAmount = typeof discount.amount === 'number'
-  if (!isValidAmount) {
-    throw new Error(`discount.amount should be type of number`)
-  }
-
-  if (discount.type === 'percent') {
-    return discountByPercent(total, discount.amount)
-  } else if (discount.type === 'nominal') {
-    return discountByNominal(total, discount.amount)
-  }
-}
-
-function discountByPercent (total, amount) {
-  return total - (total * amount / 100)
-}
-
-function discountByNominal (total, amount) {
-  return total - amount
-}
-
 module.exports = {
   create,
   addItem,
@@ -175,7 +144,4 @@ module.exports = {
   format,
   removeItem,
   setItemQty,
-  applyDiscount,
-  discountByPercent,
-  discountByNominal,
 }
