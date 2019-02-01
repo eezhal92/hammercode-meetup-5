@@ -1,7 +1,7 @@
 var request = require('supertest');
 var app = require('../../../src/app');
 var utils = require('../../utils');
-var cart = require('../../../src/cart');
+var cart = require('../../../src/lib/cart');
 var cartRepo = require('../../../src/repo/cart');
 
 var url = utils.url;

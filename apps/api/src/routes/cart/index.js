@@ -1,5 +1,5 @@
 var express = require('express');
-var cart = require('../../cart');
+var cart = require('../../lib/cart');
 var cartRepo = require('../../repo/cart');
 var lineItem = require('./line-item');
 

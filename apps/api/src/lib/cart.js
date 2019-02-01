@@ -169,13 +169,13 @@ function discountByNominal (total, amount) {
 }
 
 module.exports = {
-  create: create,
-  addItem: addItem,
-  total: total,
-  format: format,
-  removeItem: removeItem,
-  setItemQty: setItemQty,
-  applyDiscount: applyDiscount,
-  discountByPercent: discountByPercent,
-  discountByNominal: discountByNominal,
+  create,
+  addItem,
+  total,
+  format,
+  removeItem,
+  setItemQty,
+  applyDiscount,
+  discountByPercent,
+  discountByNominal,
 }
