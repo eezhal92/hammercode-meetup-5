@@ -4,6 +4,23 @@ class Checkout {
   constructor ({ cart, shipping, coupon }) {
     this.cart = cart;
     this.shipping = shipping;
+
+    if (coupon) {
+      var validTypes = ['percent', 'nominal']
+
+      if (!validTypes.includes(coupon.type)) {
+        throw new Error(`Valid type should be either one of ${validTypes.join(',')}`)
+      }
+
+      var isValidAmount = typeof coupon.amount === 'number'
+
+      if (!isValidAmount) {
+        throw new Error(`discount.amount should be type of number`)
+      }
+    }
+
+    // other validation logic that you want...
+
     this.coupon = coupon;
   }
 
@@ -13,18 +30,6 @@ class Checkout {
 
   applyCoupon (total) {
     if (!this.coupon) return total;
-
-    var validTypes = ['percent', 'nominal']
-
-    if (!validTypes.includes(this.coupon.type)) {
-      throw new Error(`Valid type should be either one of ${validTypes.join(',')}`)
-    }
-
-    var isValidAmount = typeof this.coupon.amount === 'number'
-
-    if (!isValidAmount) {
-      throw new Error(`discount.amount should be type of number`)
-    }
 
     if (this.coupon.type === 'percent') {
       return this.discountByPercent(total, this.coupon.amount)

@@ -24,38 +24,29 @@ describe('Shipping', () => {
     expect(checkout.getTotal()).toBe(140 + 10);
   });
 
-  it('should throw error when invalid type of discount.amount provided', () => {
-    const checkoutA = new Checkout({
-      cart: c,
-      shipping,
-      coupon: { amount: null, type: 'percent' }
-    });
-    const checkoutB = new Checkout({
-      cart: c,
-      shipping,
-      coupon: { amount: '20', type: 'percent' }
-    });
-
-    expect(function () {
-      checkoutA.getTotal()
+  it('should throw error when creating checkout with invalid coupon', () => {
+    expect(() => {
+      new Checkout({
+        cart: c,
+        shipping,
+        coupon: { amount: null, type: 'percent' }
+      });
     }).toThrow()
-
-    expect(function () {
-      checkoutB.getTotal()
-    }).toThrow()
-  });
-
-  it('should throw error when invalid value of discount.type provided', () => {
-    const coupon = { amount: 20, type: 'invalid-type' };
-
-    const checkout = new Checkout({
-      cart: c,
-      shipping,
-      coupon
-    });
 
     expect(() => {
-      checkout.getTotal()
+      new Checkout({
+        cart: c,
+        shipping,
+        coupon: { amount: '20', type: 'percent' }
+      });
+    }).toThrow()
+
+    expect(() => {
+      const checkout = new Checkout({
+        cart: c,
+        shipping,
+        coupon: { amount: 20, type: 'invalid-type' },
+      });
     }).toThrow()
   });
 
