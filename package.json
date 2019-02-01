@@ -1,0 +1,30 @@
+{
+  "name": "test-automation-demo",
+  "dependencies": {
+    "cypress": "^3.1.4",
+    "cypress-testing-library": "^2.3.4",
+    "lerna": "^3.8.0",
+    "start-server-and-test": "^1.7.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lerna run dev --stream",
+    "serve:test": "lerna run serve:test --stream",
+    "test": "npm run test:api",
+    "test:api": "lerna run test --scope api --stream",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e": "start-server-and-test serve:test http://localhost:8080 cypress:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eezhal92/test-automation-demo.git"
+  },
+  "keywords": [],
+  "author": "M. Rizki Rijal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eezhal92/test-automation-demo/issues"
+  },
+  "homepage": "https://github.com/eezhal92/test-automation-demo#readme"
+}

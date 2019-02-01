@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "kios-demo",
+  "alias": "kios-demo",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "/product/.*", "dest": "/index.html" },
+    { "src": "/cart", "dest": "/index.html" }
+  ]
+}

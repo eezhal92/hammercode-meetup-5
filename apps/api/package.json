@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "private": true,
+  "scripts": {
+    "dev": "node index.js",
+    "serve:test": "node index.js",
+    "start": "NODE_ENV=production node index.js",
+    "test": "jest --verbose"
+  },
+  "author": "M. Rizki Rijal",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "now": "^12.1.14",
+    "supertest": "^3.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}
