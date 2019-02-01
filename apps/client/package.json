@@ -2,7 +2,7 @@
   "name": "client",
   "private": true,
   "main": "index.js",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "scripts": {
     "start": "superstatic dist -p 8000",
     "dev": "webpack-dev-server --watch",
